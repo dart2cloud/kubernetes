@@ -1,3 +1,9 @@
-FROM python:2.7-onbuild
-EXPOSE 5000
-CMD [ "python", "web-fe.py" ]
+FROM python:latest
+
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+
+RUN pip install Flask
+
+COPY . /usr/src/app
+CMD ["python", "./web-fe.py"]

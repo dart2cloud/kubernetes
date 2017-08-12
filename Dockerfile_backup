@@ -1,0 +1,4 @@
+FROM python:latest
+EXPOSE 5000
+CMD [ "python" , "./web-fe.py" ]
+
